@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{task.title}}</h1>
+    <h4>{{task.desc|linebreaksbr}}</h4>
+    <h6>{{task.is_complete}}</h6>
+</body>
+</html>
+{% extends 'base/main.html' %}
+{% block content %}
+
+<div class="header-bar">
+    <a href="{% url 'tasks' %}">&#8592; Back</a>
+</div>
+
+
+<div class="card-body">
+    <h1>{{task.title}}</h1>
+    <h1>{{task.desc|linebreaksbr}}</h1>
+</div>
+
+
+{% endblock content %}
